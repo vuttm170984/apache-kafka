@@ -10,8 +10,15 @@ import lombok.NoArgsConstructor;
 public class LibraryEvent {
 
 	private Integer libraryEventId;
+	private LibraryEventType libraryEventType;
 	private Book book;
 	
+	public LibraryEventType getLibraryEventType() {
+		return libraryEventType;
+	}
+	public void setLibraryEventType(LibraryEventType libraryEventType) {
+		this.libraryEventType = libraryEventType;
+	}
 	public Integer getLibraryEventId() {
 		return libraryEventId;
 	}
