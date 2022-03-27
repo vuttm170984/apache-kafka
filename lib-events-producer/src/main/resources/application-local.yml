@@ -8,6 +8,10 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.IntegerSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
       #value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        acks: 1 # all
+        retries: 5
+        retry.backoff.ms: 1000 # millisecond
     admin:
       properties:
         bootstrap.servers: localhost:9092,localhost:9093,localhost:9094
